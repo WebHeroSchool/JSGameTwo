@@ -47,9 +47,17 @@ const questions = [
    },
 ]
 
-let correctAnswer = questions.forEach(function(item) {
-   if (item.correctAnswer === 'c') {
-      console.log(questions.indexOf(item) + ': ' + item.correctAnswer)
+// let correctAnswer = questions.forEach(function(item) {
+//    if (item.correctAnswer === 'c') {
+//       console.log(questions.indexOf(item) + ': ' + item.correctAnswer)
+//    }
+// });
+
+let comparison = questions.forEach(element => {
+   if (element.currentAnswer === element.correctAnswer) {
+      console.log(questions.indexOf(element) + ': ' + 'You are right. The correct answer is ' + element.correctAnswer)
+   } else { 
+      console.log(questions.indexOf(element) + ': ' + 'This is not correct: ' + element.currentAnswer + '. ' + 'The correct answer is ' + element.correctAnswer)
    }
 });
 
